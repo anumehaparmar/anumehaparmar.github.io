@@ -1,2 +1,0 @@
-# anumehaparmar.github.io
-hosting
