@@ -4,6 +4,7 @@
 
 <head>
   <title>Jindagi Ka Khel</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <style type="text/css">
     body,
     html {
@@ -21,11 +22,44 @@
       top: 0px;
     }
   </style>
+  <script>
+    window.onpaint = set_src();
+
+    function set_src() {
+      var games = [
+        "http://slither.io",
+        "https://flappybird.io/",
+        "https://flappybird.io/",
+        "https://m.fog.com/game/snake-3310-html5",
+        "http://www.games1.com/sports/cartoon-flight",
+        "https://www.agame.com/game/yummy-taco?play=true"
+      ]
+      var game = games[Math.floor(Math.random() * games.length)];
+      $('#if').attr('src', game)
+      $('#if').css('display', 'block')
+      $('#lezgo').css('display', 'none')
+    }
+  </script>
 </head>
 
 <body>
   <div id="content">
-    <iframe width="100%" height="100%" frameborder="0" src="http://slither.io" />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <center>
+      <img id="lezgo" onClick='set_src()' width="400" src="images/play.png" />
+    </center>
+    <iframe id="if" width="100%" height="100%" frameborder="0" src="" style="display:none" />
   </div>
 </body>
 
